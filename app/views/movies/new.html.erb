@@ -1,0 +1,13 @@
+<h1>Movies#new</h1>
+<p>Find me in app/views/movies/new.html.erb</p>
+
+
+<%= form_for @movie do |f| %>
+<%= f.label :title %> 
+<%= f.text_field :title %>
+<%= f.label :release_date %> 
+<%= f.number_field :release_date %>
+<%= f.label :in_theaters %> 
+<%= f.check_box :in_theaters %>
+<%= f.submit %>
+<% end %>

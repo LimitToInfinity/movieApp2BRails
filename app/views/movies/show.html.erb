@@ -1,0 +1,14 @@
+
+
+<h1><%= @movie.title %></h1>
+
+<h3>Showings</h3>
+<% @showings.each do |showing| %>
+<p><%= showing.time %>  </p>
+<%end%>
+
+<br>
+<%= link_to  "Edit Movie", edit_movie_path(@movie) %>
+<%= link_to  "Add Showing", new_showing_path %>
+<%= button_to "Delete Movie", @movie,  method: :delete %>
+

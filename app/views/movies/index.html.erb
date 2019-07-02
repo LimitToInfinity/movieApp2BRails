@@ -1,0 +1,15 @@
+<h1> Movies </h1>
+
+<ul>
+    <% @movies.each do |movie| %>
+    <li>
+        <h2><%= movie.title %></h2>
+        <p>Release Date: <%= movie.release_date %></p>
+            <% if movie.in_theaters %>
+                <p>In theatres: Yes</p>
+            <% else %>
+                <p>In theatres: No</p>
+            <% end %>
+    </li>
+    <%end%>
+</ul>
